@@ -2,7 +2,7 @@ TemplateInterface: a base interface to manage HTML templates in your project
 ============================================================================
 
 
-TemplateInterface is a (Mouf package)[http://mouf-php.com] that is the base building block of all HTML templates in Mouf.
+TemplateInterface is a [Mouf package](http://mouf-php.com) that is the base building block of all HTML templates in Mouf.
 
 You can use it without Mouf, but most of the time, you will use Mouf and its install process to get quickly started.
 Also, most of the time, you will not use the TemplateInterface package directly. Instead, you will use a Mouf template that is built using the TemplateInterface.
