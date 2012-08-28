@@ -1,0 +1,24 @@
+{
+    "name": "mouf/html.template.basetemplate",
+    "description": "This package contains the definition of an HTML template (the TemplateInterface interface) and an helper class to build HTML templates easily (the BaseTemplate class).",
+    "keywords": ["template", "templateinterface", "interface"],
+    "homepage": "https://github.com/thecodingmachine/html.template.basetemplate",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "David Négrier",
+            "email": "d.negrier@thecodingmachine.com",
+            "homepage": "http://mouf-php.com"
+        }
+    ],
+    "require": {
+    	"php": ">=5.3.0",
+    	"mouf/html.utils.weblibrarymanager": ">=2.0-dev,<3.0"
+    },
+    "autoload": {
+        "psr-0": {
+            "Mouf": "src/"
+        }
+    }
+}
