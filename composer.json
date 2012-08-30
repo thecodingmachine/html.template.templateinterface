@@ -1,8 +1,8 @@
 {
-    "name": "mouf/html.template.basetemplate",
+    "name": "mouf/html.template.templateinterface",
     "description": "This package contains the definition of an HTML template (the TemplateInterface interface) and an helper class to build HTML templates easily (the BaseTemplate class).",
     "keywords": ["template", "templateinterface", "interface"],
-    "homepage": "https://github.com/thecodingmachine/html.template.basetemplate",
+    "homepage": "https://github.com/thecodingmachine/html.template.templateinterface",
     "type": "library",
     "license": "MIT",
     "authors": [
