@@ -7,8 +7,9 @@
 
 namespace Mouf\Html\Template\BaseTemplate;
 
+use Mouf\Html\HtmlElement\HtmlElementInterface;
 use Mouf\Html\Template\TemplateInterface;
-use Mouf\Html\Utils\WebLibraryManager\WebLibraryManagerInterface;
+use Mouf\Html\Utils\WebLibraryManager\WebLibraryManager;
 
 
 /**
@@ -23,7 +24,7 @@ abstract class BaseTemplate implements TemplateInterface {
 	/**
 	 * The HTML elements that will be displayed on the center of the screen.
 	 *
-	 * @var array<HtmlElementInterface>
+	 * @var HtmlElementInterface
 	 */
 	private $content;
 
@@ -46,6 +47,16 @@ abstract class BaseTemplate implements TemplateInterface {
 	 */
 	public function __construct() {
 		$this->content = array();
+	}
+	
+	/**
+	 * The main content of the template.
+	 *
+	 * @Property
+	 * @param HtmlElementInterface $content
+	 */
+	public function setContent(HtmlElementInterface $content) {
+		$this->content = $content;
 	}
 	
 	/**
@@ -73,10 +84,10 @@ abstract class BaseTemplate implements TemplateInterface {
 	 * Sets the web library manager for this template.
 	 *
 	 * @Property
-	 * @param WebLibraryManagerInterface $webLibraryManager
+	 * @param WebLibraryManager $webLibraryManager
 	 * @return BaseTemplate
 	 */
-	public function setWebLibraryManager(WebLibraryManagerInterface $webLibraryManager) {
+	public function setWebLibraryManager(WebLibraryManager $webLibraryManager) {
 		$this->webLibraryManager = $webLibraryManager;
 		return $this;
 	}
