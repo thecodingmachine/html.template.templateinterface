@@ -26,7 +26,7 @@ abstract class BaseTemplate implements TemplateInterface {
 	 *
 	 * @var HtmlElementInterface
 	 */
-	private $content;
+	protected $content;
 
 	/**
 	 * The title of the HTML page
