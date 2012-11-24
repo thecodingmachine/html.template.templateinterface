@@ -3,7 +3,7 @@
     "description": "This package contains the definition of an HTML template (the TemplateInterface interface) and an helper class to build HTML templates easily (the BaseTemplate class).",
     "keywords": ["template", "templateinterface", "interface"],
     "homepage": "https://github.com/thecodingmachine/html.template.templateinterface",
-    "type": "library",
+    "type": "mouf-library",
     "license": "MIT",
     "authors": [
         {
