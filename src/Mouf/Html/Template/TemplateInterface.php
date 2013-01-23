@@ -18,7 +18,7 @@ interface TemplateInterface extends HtmlElementInterface {
 
 	/**
 	 * Sets the title for the HTML page
-	 * @return SplashTemplate
+	 * @return TemplateInterface
 	 */
 	public function setTitle($title);
 
