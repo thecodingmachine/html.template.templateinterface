@@ -80,7 +80,7 @@ This interface defines a number of sections that can/should be present in a web 
   <li><b>The right part</b> of the template usually contains additional information (or a menu). If the right part is empty, the right part 
   is not displayed and the content part should use the space left by the right part.</li>
   <li><b>The footer part</b> of the template contains... the footer.</li>
-</ul>
+
 
 <p>For each of those "parts", there are methods implemented from the TemplateInterface:</p>
 <p>For instance, for the content part, you can use one of those 4 methods:</p>
@@ -212,7 +212,7 @@ public function sample() {
   <li>Fields accessed from the view should be protected or public (the view cannot access "private" fields)</li>
   <li>The "Scope" should implement the "Scopable" interface. Luckily, all controllers implement this interface because they inherit
   the "Controller" class that implements the "Scopable" interface.</li>
-</ul>
+
 
 <br/>
 <h3>The <em>addXXXHtmlElement</em> methods</h3>
