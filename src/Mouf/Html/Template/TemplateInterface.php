@@ -7,6 +7,7 @@
 
 namespace Mouf\Html\Template;
 
+use Mouf\Html\Utils\WebLibraryManager\WebLibraryManager;
 use Mouf\Html\HtmlElement\HtmlElementInterface;
 use Mouf\Html\HtmlElement\Scopable;
 
