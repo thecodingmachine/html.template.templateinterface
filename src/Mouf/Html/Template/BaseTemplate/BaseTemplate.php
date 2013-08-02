@@ -10,7 +10,8 @@ namespace Mouf\Html\Template\BaseTemplate;
 use Mouf\Html\HtmlElement\HtmlElementInterface;
 use Mouf\Html\Template\TemplateInterface;
 use Mouf\Html\Utils\WebLibraryManager\WebLibraryManager;
-
+use Mouf\Html\Renderer\ChainableRendererInterface;
+use Mouf\Html\Renderer\CanSetTemplateRendererInterface;
 
 /**
  * Base class that can be used by any Splash template.
@@ -41,6 +42,21 @@ abstract class BaseTemplate implements TemplateInterface {
 	 * @var WebLibraryManagerInterface
 	 */
 	private $webLibraryManager;
+	
+	/**
+	 * The renderer used to render various items (used to overload default package behaviour)
+	 * 
+	 * @var ChainableRendererInterface
+	 */
+	private $templateRenderer;
+	
+	/**
+	 * The default renderer. The template will automatically add the $templateRenderer in the 
+	 * $defaultRenderer
+	 *
+	 * @var CanSetTemplateRendererInterface
+	 */
+	private $defaultRenderer;
 
 	/**
 	 * Default constructor
@@ -100,6 +116,46 @@ abstract class BaseTemplate implements TemplateInterface {
 	public function getWebLibraryManager() {
 		return $this->webLibraryManager;
 	}
+
+	/**
+	 * The renderer used to render various items (used to overload default package behaviour)
+	 *  
+	 * @return ChainableRendererInterface
+	 */
+	public function getTemplateRenderer() {
+		return $this->templateRenderer;
+	}
 	
+	/**
+	 * The renderer used to render various items (used to overload default package behaviour)
+	 * 
+	 * @param ChainableRendererInterface $templateRenderer
+	 * @return self
+	 */
+	public function setTemplateRenderer(ChainableRendererInterface $templateRenderer) {
+		$this->templateRenderer = $templateRenderer;
+		return $this;
+	}
+
+	/**
+	 * The default renderer. The template will automatically add the $templateRenderer in the 
+	 * $defaultRenderer
+	 * 
+	 * @return CanSetTemplateRendererInterface
+	 */
+	public function getDefaultRenderer() {
+		return $this->defaultRenderer;
+	}
+	
+	/**
+	 * The default renderer. The template will automatically add the $templateRenderer in the 
+	 * $defaultRenderer
+	 * 
+	 * @param CanSetTemplateRendererInterface $defaultRenderer
+	 */
+	public function setDefaultRenderer(CanSetTemplateRendererInterface $defaultRenderer) {
+		$this->defaultRenderer = $defaultRenderer;
+		return $this;
+	}
 }
 ?>
