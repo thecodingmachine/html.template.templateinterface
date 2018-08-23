@@ -1,3 +1,10 @@
+[![Latest Stable Version](https://poser.pugx.org/mouf/html.template.templateinterface/v/stable.svg)](https://packagist.org/packages/mouf/html.template.templateinterface)
+[![Total Downloads](https://poser.pugx.org/mouf/html.template.templateinterface/downloads.svg)](https://packagist.org/packages/mouf/html.template.templateinterface)
+[![Latest Unstable Version](https://poser.pugx.org/mouf/html.template.templateinterface/v/unstable)](https://packagist.org/packages/mouf/html.template.templateinterface)
+[![License](https://poser.pugx.org/mouf/html.template.templateinterface/license)](https://packagist.org/packages/mouf/html.template.templateinterface)
+[![Build Status](https://travis-ci.org/thecodingmachine/html.template.templateinterface.svg?branch=3.0)](https://travis-ci.org/thecodingmachine/html.template.templateinterface)
+[![Coverage Status](https://coveralls.io/repos/thecodingmachine/html.template.templateinterface/badge.svg?branch=3.0&service=github)](https://coveralls.io/github/thecodingmachine/html.template.templateinterface?branch=3.0)
+
 TemplateInterface: a base interface to manage HTML templates in your project
 ============================================================================
 
