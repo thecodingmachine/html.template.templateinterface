@@ -39,7 +39,7 @@ abstract class BaseTemplate implements TemplateInterface {
 	/**
 	 * The weblibrarymanager is in charge of handing JS files.
 	 * 
-	 * @var WebLibraryManagerInterface
+	 * @var WebLibraryManager
 	 */
 	private $webLibraryManager;
 	
@@ -59,32 +59,22 @@ abstract class BaseTemplate implements TemplateInterface {
 	private $defaultRenderer;
 
 	/**
-	 * Default constructor
-	 */
-	public function __construct() {
-		$this->content = array();
-	}
-	
-	/**
 	 * The main content of the template.
 	 *
 	 * @Property
 	 * @param HtmlElementInterface $content
 	 */
-	public function setContent(HtmlElementInterface $content) {
+	public function setContent(HtmlElementInterface $content): void {
 		$this->content = $content;
 	}
 	
 	/**
 	 * Sets the title for the HTML page
 	 * 
-	 * @Property
 	 * @param string $title
-	 * @return BaseTemplate
 	 */
-	public function setTitle($title) {
+	public function setTitle(string $title): void {
 		$this->title = $title;
-		return $this;
 	}
 
 	/**
@@ -92,7 +82,7 @@ abstract class BaseTemplate implements TemplateInterface {
 	 * 
 	 * @return string
 	 */
-	public function getTitle() {
+	public function getTitle(): string {
 		return $this->title;
 	}
 
@@ -103,7 +93,7 @@ abstract class BaseTemplate implements TemplateInterface {
 	 * @param WebLibraryManager $webLibraryManager
 	 * @return BaseTemplate
 	 */
-	public function setWebLibraryManager(WebLibraryManager $webLibraryManager) {
+	public function setWebLibraryManager(WebLibraryManager $webLibraryManager): self {
 		$this->webLibraryManager = $webLibraryManager;
 		return $this;
 	}
@@ -113,7 +103,7 @@ abstract class BaseTemplate implements TemplateInterface {
 	 * 
 	 * @return WebLibraryManager
 	 */
-	public function getWebLibraryManager() {
+	public function getWebLibraryManager(): WebLibraryManager {
 		return $this->webLibraryManager;
 	}
 
@@ -122,7 +112,7 @@ abstract class BaseTemplate implements TemplateInterface {
 	 *  
 	 * @return ChainableRendererInterface
 	 */
-	public function getTemplateRenderer() {
+	public function getTemplateRenderer(): ChainableRendererInterface {
 		return $this->templateRenderer;
 	}
 	
@@ -132,7 +122,7 @@ abstract class BaseTemplate implements TemplateInterface {
 	 * @param ChainableRendererInterface $templateRenderer
 	 * @return self
 	 */
-	public function setTemplateRenderer(ChainableRendererInterface $templateRenderer) {
+	public function setTemplateRenderer(ChainableRendererInterface $templateRenderer): self {
 		$this->templateRenderer = $templateRenderer;
 		return $this;
 	}
@@ -143,7 +133,7 @@ abstract class BaseTemplate implements TemplateInterface {
 	 * 
 	 * @return CanSetTemplateRendererInterface
 	 */
-	public function getDefaultRenderer() {
+	public function getDefaultRenderer(): CanSetTemplateRendererInterface {
 		return $this->defaultRenderer;
 	}
 	
@@ -153,7 +143,7 @@ abstract class BaseTemplate implements TemplateInterface {
 	 * 
 	 * @param CanSetTemplateRendererInterface $defaultRenderer
 	 */
-	public function setDefaultRenderer(CanSetTemplateRendererInterface $defaultRenderer) {
+	public function setDefaultRenderer(CanSetTemplateRendererInterface $defaultRenderer): self {
 		$this->defaultRenderer = $defaultRenderer;
 		return $this;
 	}

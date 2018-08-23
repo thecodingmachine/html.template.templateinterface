@@ -19,15 +19,13 @@ interface TemplateInterface extends HtmlElementInterface {
 
 	/**
 	 * Sets the title for the HTML page
-	 * @return TemplateInterface
 	 */
-	public function setTitle($title);
+	public function setTitle(string $title): void;
 
 	/**
 	 * Returns the WebLibraryManager object that can be used to add JS/CSS files to this template.
 	 * 
 	 * @return WebLibraryManager
 	 */
-	public function getWebLibraryManager();
+	public function getWebLibraryManager(): WebLibraryManager;
 }
-?>
