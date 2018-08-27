@@ -122,7 +122,7 @@ abstract class BaseTemplate implements TemplateInterface
     /**
      * The renderer used to render various items (used to overload default package behaviour)
      *
-     * @return ChainableRendererInterface
+     * @return string
      */
     protected function getTemplateRendererInstanceName(): string
     {
