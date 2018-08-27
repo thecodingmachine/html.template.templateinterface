@@ -45,11 +45,11 @@ abstract class BaseTemplate implements TemplateInterface
     private $webLibraryManager;
     
     /**
-     * The renderer used to render various items (used to overload default package behaviour)
+     * The container identifier of the renderer used to render various items (used to overload default package behaviour)
      *
-     * @var ChainableRendererInterface
+     * @var string
      */
-    private $templateRenderer;
+    private $templateRendererInstanceName;
     
     /**
      * The default renderer. The template will automatically add the $templateRenderer in the
@@ -58,6 +58,12 @@ abstract class BaseTemplate implements TemplateInterface
      * @var CanSetTemplateRendererInterface
      */
     private $defaultRenderer;
+
+    public function __construct(CanSetTemplateRendererInterface $defaultRenderer, string $templateRendererInstanceName)
+    {
+        $this->defaultRenderer = $defaultRenderer;
+        $this->templateRendererInstanceName = $templateRendererInstanceName;
+    }
 
     /**
      * The main content of the template.
@@ -116,45 +122,21 @@ abstract class BaseTemplate implements TemplateInterface
     /**
      * The renderer used to render various items (used to overload default package behaviour)
      *
-     * @return ChainableRendererInterface
+     * @return string
      */
-    public function getTemplateRenderer(): ChainableRendererInterface
+    protected function getTemplateRendererInstanceName(): string
     {
-        return $this->templateRenderer;
+        return $this->templateRendererInstanceName;
     }
     
-    /**
-     * The renderer used to render various items (used to overload default package behaviour)
-     *
-     * @param ChainableRendererInterface $templateRenderer
-     * @return self
-     */
-    public function setTemplateRenderer(ChainableRendererInterface $templateRenderer): self
-    {
-        $this->templateRenderer = $templateRenderer;
-        return $this;
-    }
-
     /**
      * The default renderer. The template will automatically add the $templateRenderer in the
      * $defaultRenderer
      *
      * @return CanSetTemplateRendererInterface
      */
-    public function getDefaultRenderer(): CanSetTemplateRendererInterface
+    protected function getDefaultRenderer(): CanSetTemplateRendererInterface
     {
         return $this->defaultRenderer;
-    }
-    
-    /**
-     * The default renderer. The template will automatically add the $templateRenderer in the
-     * $defaultRenderer
-     *
-     * @param CanSetTemplateRendererInterface $defaultRenderer
-     */
-    public function setDefaultRenderer(CanSetTemplateRendererInterface $defaultRenderer): self
-    {
-        $this->defaultRenderer = $defaultRenderer;
-        return $this;
     }
 }

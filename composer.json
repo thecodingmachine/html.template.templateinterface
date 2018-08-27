@@ -17,9 +17,9 @@
 	"license" : "MIT",
 	"require" : {
 		"mouf/html.htmlelement": "^2",
-		"mouf/html.utils.weblibrarymanager" : "^2 || ^3 || ^4",
-		"php" : ">=5.3",
-		"mouf/html.renderer" : "^1 || ^2"
+		"mouf/html.utils.weblibrarymanager" : "^4",
+		"php" : ">=7.1",
+		"mouf/html.renderer" : "^2"
 	},
   "require-dev": {
     "phpstan/phpstan": "^0.10.3",
