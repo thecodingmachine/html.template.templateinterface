@@ -35,7 +35,7 @@ abstract class BaseTemplate implements TemplateInterface
      *
      * @var string
      */
-    private $title;
+    private $title= '';
     
     /**
      * The weblibrarymanager is in charge of handing JS files.
