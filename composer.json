@@ -16,19 +16,16 @@
 	"homepage" : "https://github.com/thecodingmachine/html.template.templateinterface",
 	"license" : "MIT",
 	"require" : {
+		"php" : "^8.0",
 		"mouf/html.htmlelement": "^2",
 		"mouf/html.utils.weblibrarymanager" : "^4",
-		"php" : ">=7.1",
 		"mouf/html.renderer" : "^2"
 	},
   "require-dev": {
-    "phpstan/phpstan": "^0.10.3",
-    "thecodingmachine/phpstan-strict-rules": "^0.10.3",
-    "maglnet/composer-require-checker": "^1.0",
+    "phpstan/phpstan": "^1.9",
+    "thecodingmachine/phpstan-strict-rules": "^1.0",
+    "maglnet/composer-require-checker": "^4.2",
     "squizlabs/php_codesniffer": "^3.3.1"
-  },
-  "conflict": {
-    "mouf/mouf": "~2.0.0"
   },
   "scripts": {
 	"cs-check": "phpcs",
@@ -41,5 +38,11 @@
 		}
 	},
 	"minimum-stability": "dev",
-	"prefer-stable": true
+	"prefer-stable": true,
+	"config": {
+		"allow-plugins": {
+			"mindplay/composer-locator": true,
+			"mouf/mouf-installer": true
+		}
+	}
 }
